@@ -1,0 +1,37 @@
+<%= form_for(@beneficio) do |f| %>
+  <% if @beneficio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@beneficio.errors.count, "error") %> prohibited this beneficio from being saved:</h2>
+
+      <ul>
+      <% @beneficio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :codigo %><br>
+    <%= f.text_field :codigo %>
+  </div>
+  <div class="field">
+    <%= f.label :merito_a %><br>
+    <%= f.text_area :merito_a %>
+  </div>
+  <div class="field">
+    <%= f.label :desde %><br>
+    <%= f.date_select :desde %>
+  </div>
+  <div class="field">
+    <%= f.label :hasta %><br>
+    <%= f.date_select :hasta %>
+  </div>
+  <div class="field">
+    <%= f.label :reo_id %><br>
+    <%= f.text_field :reo_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

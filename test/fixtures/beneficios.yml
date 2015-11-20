@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  codigo: MyString
+  merito_a: MyText
+  desde: 2015-11-20
+  hasta: 2015-11-20
+  reo_id: 
+
+two:
+  codigo: MyString
+  merito_a: MyText
+  desde: 2015-11-20
+  hasta: 2015-11-20
+  reo_id: 

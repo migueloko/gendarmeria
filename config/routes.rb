@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :ficha_carcelaria
+  resources :ficha_ingresos
+  resources :beneficios
+  resources :reos
+  resources :recintos
+  devise_for :usuarios
   get 'inicio/index'
 
   get 'inicio/index'

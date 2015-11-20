@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Codigo:</strong>
+  <%= @beneficio.codigo %>
+</p>
+
+<p>
+  <strong>Merito a:</strong>
+  <%= @beneficio.merito_a %>
+</p>
+
+<p>
+  <strong>Desde:</strong>
+  <%= @beneficio.desde %>
+</p>
+
+<p>
+  <strong>Hasta:</strong>
+  <%= @beneficio.hasta %>
+</p>
+
+<p>
+  <strong>Reo:</strong>
+  <%= @beneficio.reo %>
+</p>
+
+<%= link_to 'Edit', edit_beneficio_path(@beneficio) %> |
+<%= link_to 'Back', beneficios_path %>

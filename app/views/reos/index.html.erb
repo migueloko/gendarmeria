@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Reos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Rut</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Direccion</th>
+      <th>Fono</th>
+      <th>Correo</th>
+      <th>Recinto</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reos.each do |reo| %>
+      <tr>
+        <td><%= reo.rut %></td>
+        <td><%= reo.nombre %></td>
+        <td><%= reo.apellido %></td>
+        <td><%= reo.direccion %></td>
+        <td><%= reo.fono %></td>
+        <td><%= reo.correo %></td>
+        <td><%= reo.recinto %></td>
+        <td><%= link_to 'Show', reo %></td>
+        <td><%= link_to 'Edit', edit_reo_path(reo) %></td>
+        <td><%= link_to 'Destroy', reo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Reo', new_reo_path %>

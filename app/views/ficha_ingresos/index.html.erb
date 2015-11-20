@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Ficha Ingresos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Codigo ficha</th>
+      <th>Fecha ingreso</th>
+      <th>Ubicacion</th>
+      <th>Condena</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ficha_ingresos.each do |ficha_ingreso| %>
+      <tr>
+        <td><%= ficha_ingreso.codigo_ficha %></td>
+        <td><%= ficha_ingreso.fecha_ingreso %></td>
+        <td><%= ficha_ingreso.ubicacion %></td>
+        <td><%= ficha_ingreso.condena %></td>
+        <td><%= link_to 'Show', ficha_ingreso %></td>
+        <td><%= link_to 'Edit', edit_ficha_ingreso_path(ficha_ingreso) %></td>
+        <td><%= link_to 'Destroy', ficha_ingreso, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ficha ingreso', new_ficha_ingreso_path %>

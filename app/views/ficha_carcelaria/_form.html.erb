@@ -1,0 +1,37 @@
+<%= form_for(@ficha_carcelarium) do |f| %>
+  <% if @ficha_carcelarium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ficha_carcelarium.errors.count, "error") %> prohibited this ficha_carcelarium from being saved:</h2>
+
+      <ul>
+      <% @ficha_carcelarium.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :codigo_ficha_ingreso %><br>
+    <%= f.text_field :codigo_ficha_ingreso %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_ingreso_date %><br>
+    <%= f.text_field :fecha_ingreso_date %>
+  </div>
+  <div class="field">
+    <%= f.label :rut_reo %><br>
+    <%= f.text_field :rut_reo %>
+  </div>
+  <div class="field">
+    <%= f.label :reo_id %><br>
+    <%= f.text_field :reo_id %>
+  </div>
+  <div class="field">
+    <%= f.label :ficha_ingreso__id %><br>
+    <%= f.text_field :ficha_ingreso__id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

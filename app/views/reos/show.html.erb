@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rut:</strong>
+  <%= @reo.rut %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @reo.nombre %>
+</p>
+
+<p>
+  <strong>Apellido:</strong>
+  <%= @reo.apellido %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @reo.direccion %>
+</p>
+
+<p>
+  <strong>Fono:</strong>
+  <%= @reo.fono %>
+</p>
+
+<p>
+  <strong>Correo:</strong>
+  <%= @reo.correo %>
+</p>
+
+<p>
+  <strong>Recinto:</strong>
+  <%= @reo.recinto %>
+</p>
+
+<%= link_to 'Edit', edit_reo_path(@reo) %> |
+<%= link_to 'Back', reos_path %>

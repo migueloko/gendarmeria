@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  codigo_ficha: MyString
+  fecha_ingreso: 2015-11-20
+  ubicacion: MyString
+  condena: MyString
+
+two:
+  codigo_ficha: MyString
+  fecha_ingreso: 2015-11-20
+  ubicacion: MyString
+  condena: MyString

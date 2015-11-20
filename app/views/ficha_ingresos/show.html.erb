@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Codigo ficha:</strong>
+  <%= @ficha_ingreso.codigo_ficha %>
+</p>
+
+<p>
+  <strong>Fecha ingreso:</strong>
+  <%= @ficha_ingreso.fecha_ingreso %>
+</p>
+
+<p>
+  <strong>Ubicacion:</strong>
+  <%= @ficha_ingreso.ubicacion %>
+</p>
+
+<p>
+  <strong>Condena:</strong>
+  <%= @ficha_ingreso.condena %>
+</p>
+
+<%= link_to 'Edit', edit_ficha_ingreso_path(@ficha_ingreso) %> |
+<%= link_to 'Back', ficha_ingresos_path %>
