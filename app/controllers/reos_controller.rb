@@ -1,5 +1,6 @@
 class ReosController < ApplicationController
   before_action :set_reo, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_usuario!, except: [:show, :index]
 
   # GET /reos
   # GET /reos.json

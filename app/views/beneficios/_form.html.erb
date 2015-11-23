@@ -29,7 +29,7 @@
   </div>
   <div class="field">
     <%= f.label :reo_id %><br>
-    <%= f.text_field :reo_id %>
+    <%= f.select("reo_id",Reo.all.collect{|l| [l.nombre, l.id ]}, {include_blank:'select Reo'})%>
   </div>
   <div class="actions">
     <%= f.submit %>

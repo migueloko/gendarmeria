@@ -1,5 +1,6 @@
 class RecintosController < ApplicationController
   before_action :set_recinto, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_usuario!, except: [:show, :index]
 
   # GET /recintos
   # GET /recintos.json

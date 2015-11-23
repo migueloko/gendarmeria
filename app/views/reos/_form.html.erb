@@ -37,7 +37,7 @@
   </div>
   <div class="field">
     <%= f.label :recinto_id %><br>
-    <%= f.text_field :recinto_id %>
+    <%= f.select("recinto_id",Recinto.all.collect{|l| [l.nombre, l.id ]}, {include_blank:'select Recinto'})%>
   </div>
   <div class="actions">
     <%= f.submit %>

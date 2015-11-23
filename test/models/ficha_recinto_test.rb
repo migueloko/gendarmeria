@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class FichaCarcelariumTest < ActiveSupport::TestCase
+class FichaRecintoTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

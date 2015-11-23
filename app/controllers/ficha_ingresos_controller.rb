@@ -1,5 +1,6 @@
 class FichaIngresosController < ApplicationController
   before_action :set_ficha_ingreso, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_usuario!, except: [:show, :index]
 
   # GET /ficha_ingresos
   # GET /ficha_ingresos.json

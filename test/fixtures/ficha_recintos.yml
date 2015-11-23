@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ficha_ingreso_id: 
+  reo_id: 
+  observaciones: MyText
+
+two:
+  ficha_ingreso_id: 
+  reo_id: 
+  observaciones: MyText

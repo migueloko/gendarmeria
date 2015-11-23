@@ -1,5 +1,6 @@
 class BeneficiosController < ApplicationController
   before_action :set_beneficio, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_usuario!, except: [:show, :index]
 
   # GET /beneficios
   # GET /beneficios.json

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Ficha Recintos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ficha ingreso</th>
+      <th>Reo</th>
+      <th>Observaciones</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ficha_recintos.each do |ficha_recinto| %>
+      <tr>
+        <td><%= ficha_recinto.ficha_ingreso %></td>
+        <td><%= ficha_recinto.reo %></td>
+        <td><%= ficha_recinto.observaciones %></td>
+        <td><%= link_to 'Show', ficha_recinto %></td>
+        <td><%= link_to 'Edit', edit_ficha_recinto_path(ficha_recinto) %></td>
+        <td><%= link_to 'Destroy', ficha_recinto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ficha recinto', new_ficha_recinto_path %>

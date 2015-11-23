@@ -21,7 +21,7 @@
         <td><%= beneficio.merito_a %></td>
         <td><%= beneficio.desde %></td>
         <td><%= beneficio.hasta %></td>
-        <td><%= beneficio.reo %></td>
+        <td><%= beneficio.reo.nombre %></td>
         <td><%= link_to 'Show', beneficio %></td>
         <td><%= link_to 'Edit', edit_beneficio_path(beneficio) %></td>
         <td><%= link_to 'Destroy', beneficio, method: :delete, data: { confirm: 'Are you sure?' } %></td>

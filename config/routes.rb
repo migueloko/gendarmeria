@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :ficha_carcelaria
+  resources :ficha_recintos
   resources :ficha_ingresos
   resources :beneficios
   resources :reos

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151120232100) do
+ActiveRecord::Schema.define(version: 20151123235454) do
 
   create_table "beneficios", force: :cascade do |t|
     t.string   "codigo"
@@ -25,19 +25,6 @@ ActiveRecord::Schema.define(version: 20151120232100) do
 
   add_index "beneficios", ["reo_id"], name: "index_beneficios_on_reo_id"
 
-  create_table "ficha_carcelaria", force: :cascade do |t|
-    t.string   "codigo_ficha_ingreso"
-    t.string   "fecha_ingreso_date"
-    t.string   "rut_reo"
-    t.integer  "reo_id"
-    t.integer  "ficha_ingreso__id"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
-  end
-
-  add_index "ficha_carcelaria", ["ficha_ingreso__id"], name: "index_ficha_carcelaria_on_ficha_ingreso__id"
-  add_index "ficha_carcelaria", ["reo_id"], name: "index_ficha_carcelaria_on_reo_id"
-
   create_table "ficha_ingresos", force: :cascade do |t|
     t.string   "codigo_ficha"
     t.date     "fecha_ingreso"
@@ -46,6 +33,17 @@ ActiveRecord::Schema.define(version: 20151120232100) do
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end
+
+  create_table "ficha_recintos", force: :cascade do |t|
+    t.integer  "ficha_ingreso_id"
+    t.integer  "reo_id"
+    t.text     "observaciones"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  add_index "ficha_recintos", ["ficha_ingreso_id"], name: "index_ficha_recintos_on_ficha_ingreso_id"
+  add_index "ficha_recintos", ["reo_id"], name: "index_ficha_recintos_on_reo_id"
 
   create_table "recintos", force: :cascade do |t|
     t.string   "codigo"
