@@ -15,8 +15,8 @@
   <tbody>
     <% @ficha_recintos.each do |ficha_recinto| %>
       <tr>
-        <td><%= ficha_recinto.ficha_ingreso %></td>
-        <td><%= ficha_recinto.reo %></td>
+        <td><%= ficha_recinto.ficha_ingreso.codigo_ficha %></td>
+        <td><%= ficha_recinto.reo.nombre %></td>
         <td><%= ficha_recinto.observaciones %></td>
         <td><%= link_to 'Show', ficha_recinto %></td>
         <td><%= link_to 'Edit', edit_ficha_recinto_path(ficha_recinto) %></td>
