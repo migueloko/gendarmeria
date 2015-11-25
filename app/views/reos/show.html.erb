@@ -35,5 +35,18 @@
   <%= @reo.recinto.nombre %>
 </p>
 
+<h2>Informacion Interno:</h2>
+<% @ficha_ingresos.each do |ficha_ingreso| %>
+  <strong>condena:</strong>
+  <%= ficha_ingreso.condena %>
+  <strong>fecha ingreso:</strong>
+  <%= ficha_ingreso.fecha_ingreso %>
+  <strong>ubicacion:</strong>
+  <%= ficha_ingreso.ubicacion %>
+
+
+  <br>
+<% end %>
+
 <%= link_to 'Edit', edit_reo_path(@reo) %> |
 <%= link_to 'Back', reos_path %>

@@ -1,9 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Lista de Internos</h1>
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Internos</div>
 
-<table>
-  <thead>
+  <!-- Table -->
+  <table class="table">
+
+
     <tr>
       <th>Rut</th>
       <th>Nombre</th>
@@ -25,7 +29,7 @@
         <td><%= reo.direccion %></td>
         <td><%= reo.fono %></td>
         <td><%= reo.correo %></td>
-        <td><%= reo.recinto.nombre %></td>
+        <td><%= reo.recinto%></td>
         <td><%= link_to 'Show', reo %></td>
         <td><%= link_to 'Edit', edit_reo_path(reo) %></td>
         <td><%= link_to 'Destroy', reo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -33,6 +37,7 @@
     <% end %>
   </tbody>
 </table>
+</div>
 
 <br>
 

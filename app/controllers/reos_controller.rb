@@ -11,6 +11,7 @@ class ReosController < ApplicationController
   # GET /reos/1
   # GET /reos/1.json
   def show
+      @ficha_ingresos = @reo.ficha_ingreso.all
   end
 
   # GET /reos/new
